@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply bg-creme-500 dark:bg-myGray-500;
+    }
+
+    .home-content-container {
+        width: calc(100vw - theme('spacing.7'));
+        height: calc(75vh - theme('spacing.7'));
+        position: relative;
+    }
+
+    .home-content-container::after {
+        content: '';
+        background-image: url("../public/images/stars-bg.jpg");
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 10;
+        @apply rounded-xl;
+    }
+}

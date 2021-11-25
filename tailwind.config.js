@@ -3,12 +3,13 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       blue: colors.cyan,
       red: colors.rose,
       gray: colors.warmGray,
+      white: colors.white,
       myGray: {
         50: '#f5f5f6',
         100: '#ebecec',
@@ -59,8 +60,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Outfit', 'sans-serif'],
+      serif: ['Libre Baskerville', 'serif'],
     },
     extend: {
       spacing: {
