@@ -32,6 +32,8 @@ export default function Layout({ children }) {
             <main className="flex flex-col items-center justify-center w-full flex-1">
                 {children}
             </main>
+
+            <Footer />
         </div>
     )
 }

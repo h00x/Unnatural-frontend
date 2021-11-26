@@ -15,11 +15,21 @@ export default function Navigation({ darkMode, setDarkMode }) {
             <Link href="/">
                 <a><Logo /></a>
             </Link>
-            <div>
+            <div className="flex items-center">
                 <MenuItem href="/about">About me</MenuItem>
                 <MenuItem href="/portfolio">Portfolio</MenuItem>
-                <input type="checkbox" name="darkMode" checked={darkMode} onChange={event => setDarkMode(event.target.checked)} />
-                <label htmlFor="darkMode">Darkmode</label>
+                <div className="relative w-8 h-5 rounded-2xl bg-myGray-500 dark:bg-creme-500 cursor-pointer inline-block ml-8 transition-all duration-500 ease-in-out">
+                    <input
+                        type="checkbox"
+                        name="darkMode"
+                        checked={darkMode}
+                        onChange={() => setDarkMode(!darkMode)}
+                        className="absolute w-full h-full opacity-0 cursor-pointer z-50"
+                    />
+                    <span
+                        className="absolute top-0.5 left-3 dark:left-1 dark:bg-myGray-500 bg-creme-500 w-4 h-4 rounded-2xl transition-all duration-200 ease-in-out"
+                    />
+                </div>
             </div>
         </nav>
     )

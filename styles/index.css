@@ -4,7 +4,7 @@
 
 @layer components {
     body {
-        @apply bg-creme-500 dark:bg-myGray-500;
+        @apply bg-creme-500 dark:bg-myGray-500 transition-colors duration-500 ease-in-out;
     }
 
     .home-content-container {
@@ -24,5 +24,10 @@
         position: absolute;
         z-index: 10;
         @apply rounded-xl;
+    }
+
+    .dark .home-content-container::after {
+        opacity: 1;
+        mix-blend-mode: color-burn;
     }
 }

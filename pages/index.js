@@ -19,7 +19,7 @@ export async function getStaticProps() {
 export default function Home({ home }) {
   return (
     <Layout>
-        <div className="flex flex-col items-center justify-center m-4 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-riptide-900">
+        <div className="flex flex-col items-center justify-center m-4 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-myGray-500">
             <div className="z-20">
                 <p className="flex items-center justify-center text-4xl mb-2">
                     { home.subtitle } <span className="text-base ml-4"><ButtonSimple href="/contact">Available for Remote Freelance Work</ButtonSimple></span>
@@ -56,8 +56,6 @@ export default function Home({ home }) {
                 teest
             </div>
         </div>
-
-        <Footer />
     </Layout>
   )
 }
