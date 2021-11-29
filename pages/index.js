@@ -21,7 +21,7 @@ export default function Home({ home }) {
     <Layout>
         <div className="flex flex-col items-center justify-center m-4 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-myGray-500">
             <div className="z-20">
-                <p className="flex items-center justify-center text-4xl mb-2">
+                <p className="flex items-center justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
                     { home.subtitle } <span className="text-base ml-4"><ButtonSimple href="/contact">Available for Remote Freelance Work</ButtonSimple></span>
                 </p>
 
@@ -30,7 +30,7 @@ export default function Home({ home }) {
                 </h1>
 
                 <div className="w-full flex justify-end">
-                    <p className="mb-12 md:w-1/3 w-full md:text-left">I help companies to design digital products and turn ideas into a functional and delightful experience. I’m focusing on working on interface and digital design – mainly building products, branding and websites.</p>
+                    <p className="mb-12 md:w-1/3 w-full md:text-left transition-colors duration-500 ease-in-out">I help companies to design digital products and turn ideas into a functional and delightful experience. I’m focusing on working on interface and digital design – mainly building products, branding and websites.</p>
                 </div>
                 <Button href="mailto:dave@unnatural.nl" icon={<FontAwesomeIcon icon={faPaperPlane} />}>dave@unnatural.nl</Button>
             </div>

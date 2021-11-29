@@ -25,9 +25,4 @@
         z-index: 10;
         @apply rounded-xl;
     }
-
-    .dark .home-content-container::after {
-        opacity: 1;
-        mix-blend-mode: color-burn;
-    }
 }
