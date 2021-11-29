@@ -33,8 +33,8 @@ export default function Navigation({darkMode, setDarkMode}) {
                     <span
                         className="absolute top-0.5 left-6 dark:left-1 dark:bg-myGray-500 bg-creme-500 w-5 h-5 rounded-2xl transition-all duration-200 ease-in-out z-20"
                     />
-                    <FontAwesomeIcon icon={faSun} className="text-creme-500 dark:text-myGray-500 text-xs absolute left-7 top-1.5" />
-                    <FontAwesomeIcon icon={faMoon} className="text-creme-500 dark:text-myGray-500 text-xs absolute left-2 top-1.5" />
+                    <FontAwesomeIcon icon={faSun} className="text-creme-500 dark:text-myGray-500 text-xs absolute left-7 top-1.5 transition-all duration-200 ease-in-out" />
+                    <FontAwesomeIcon icon={faMoon} className="text-creme-500 dark:text-myGray-500 text-xs absolute left-2 top-1.5 transition-all duration-200 ease-in-out" />
                 </div>
             </div>
         </nav>

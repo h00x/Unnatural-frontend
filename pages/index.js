@@ -49,7 +49,9 @@ export default function Home({ home }) {
             </div>
         </div>
 
-        <h2 className="md:text-8xl text-6xl font-bold w-full md:px-16 px-8 max-w-7xl">Projects</h2>
+        <div className="w-full px-8 max-w-7xl">
+            <h2 className="md:text-8xl text-6xl font-bold inline-block mr-8">Projects</h2><ButtonSimple href="/portfolio">All projects</ButtonSimple>
+        </div>
         <div className="flex flex-col justify-center md:flex-row w-full md:my-32 my-16 px-8">
             <div className="flex flex-col items-center md:w-2/3 w-full md:mr-16 max-w-7xl">
                 <div className="lg:w-3/4 md:w-full w-full h-80 relative">
