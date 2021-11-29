@@ -28,4 +28,8 @@
         z-index: 10;
         @apply rounded-xl;
     }
+
+    .footer-width {
+        width: calc(100% - 2rem);
+    }
 }
