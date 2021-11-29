@@ -1,9 +1,11 @@
 import Layout from '../components/layout'
 import Footer from "../components/footer"
 import Button from '../components/button'
-import ButtonSimple from "../components/button-simple";
+import ButtonSimple from '../components/button-simple'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
+import profilePicture from '../public/images/dave.jpg'
 
 export async function getStaticProps() {
   const res = await fetch(process.env.API_URL + 'home')
@@ -37,8 +39,8 @@ export default function Home({ home }) {
         </div>
 
         <div className="flex flex-col md:flex-row w-full my-32 md:px-16 px-8">
-            <div className="md:w-1/2 w-full">
-                test
+            <div className="md:w-1/2 w-full md:text-right text-center md:mr-16">
+                <Image src={profilePicture} alt="Picture of Dave Hoeks" placeholder="blur" className="rounded-4xl" />
             </div>
             <div className="md:w-1/2 w-full">
                 <h2 className="md:text-8xl text-6xl font-bold mb-8">About<br />me</h2>
@@ -47,13 +49,29 @@ export default function Home({ home }) {
             </div>
         </div>
 
-        <h2 className="md:text-8xl text-6xl font-bold mb-8 w-full md:px-16 px-8">Projects</h2>
-        <div className="flex flex-col md:flex-row w-full my-32 md:px-16 px-8">
-            <div className="md:w-2/3 w-full">
-                test
+        <h2 className="md:text-8xl text-6xl font-bold w-full md:px-16 px-8 max-w-7xl">Projects</h2>
+        <div className="flex flex-col justify-center md:flex-row w-full md:my-32 my-16 px-8">
+            <div className="flex flex-col items-center md:w-2/3 w-full md:mr-16 max-w-7xl">
+                <div className="lg:w-3/4 md:w-full w-full h-80 relative">
+                    <Image src={profilePicture} layout='fill' objectFit='cover' objectPosition='bottom' alt="Picture of Dave Hoeks" placeholder="blur" className="rounded-2xl" />
+                </div>
+                <div className="lg:w-1/2 md:w-3/4 mt-12">
+                    <p className="font-bold mb-4">E-zorg</p>
+                    <h2 className="text-3xl font-bold mb-4">Design, corporate identity and development of website</h2>
+                    <p className="mb-8">E-Zorg (part of KPN) needed an update in their corporate identity. I made a redesign for their website, developed it with Wordpress as a backend as requested by E-Zorg. I've also redesigned the business carts, official writing papers, stickers, presentation slides, email templates and made the brand identity book.</p>
+                    <ButtonSimple href="#">Go to project</ButtonSimple>
+                </div>
             </div>
-            <div className="md:w-1/3 w-full">
-                teest
+            <div className="flex flex-col items-center md:w-1/3 w-full mt-32 max-w-3xl">
+                <div className="lg:w-3/4 md:w-full w-full h-40 relative">
+                    <Image src={profilePicture} layout='fill' objectFit='cover' objectPosition='bottom' alt="Picture of Dave Hoeks" placeholder="blur" className="rounded-2xl" />
+                </div>
+                <div className="lg:w-1/2 md: 3/4 mt-12">
+                    <p className="font-bold mb-4">E-zorg</p>
+                    <h2 className="text-3xl font-bold mb-4">Design, corporate identity and development of website</h2>
+                    <p className="mb-8">E-Zorg (part of KPN) needed an update in their corporate identity. I made a redesign for their website, developed it with Wordpress as a backend as requested by E-Zorg. I've also redesigned the business carts, official writing papers, stickers, presentation slides, email templates and made the brand identity book.</p>
+                    <ButtonSimple href="#">Go to project</ButtonSimple>
+                </div>
             </div>
         </div>
     </Layout>

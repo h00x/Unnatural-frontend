@@ -16,6 +16,9 @@
     .home-content-container::after {
         content: '';
         background-image: url("../public/images/stars-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         opacity: 0.3;
         top: 0;
         left: 0;
