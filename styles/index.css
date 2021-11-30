@@ -11,7 +11,23 @@
     .document-lines::after {
         content: "";
         height: 100vh;
-        @apply z-50 bg-creme-500 top-0 w-4 fixed;
+        @apply z-50 bg-creme-500 dark:bg-myGray-500 top-0 w-4 fixed transition-colors duration-500 ease-in-out;
+    }
+
+    .inverted-border-radius::before {
+        content: "";
+        position: absolute;
+
+        bottom: -3rem;
+        height: 3rem;
+        width: calc(100vw - theme('spacing.8'));
+        @apply rounded-t-xl transition-shadow duration-500 ease-in-out;
+        box-shadow: 0 -1rem 0 0 #fff4eb;
+        z-index: 0;
+    }
+
+    .dark .inverted-border-radius::before {
+        box-shadow: 0 -1rem 0 0 #393f43;
     }
 
     .document-lines::before {
@@ -49,17 +65,5 @@
 
     .footer-width {
         width: calc(100% - 2rem);
-    }
-
-    .inverted-border-radius::before {
-        content: "";
-        position: absolute;
-
-        bottom: -3rem;
-        height: 3rem;
-        width: calc(100vw - theme('spacing.8'));
-        @apply rounded-t-xl;
-        box-shadow: 0 -25px 0 0 #fff4eb;
-        z-index: 0;
     }
 }
