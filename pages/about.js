@@ -11,7 +11,7 @@ export default function About() {
         <Layout>
             <div className="w-full max-w-7xl md:px-16 px-8 mb-16 mt-32">
                 <h1 className="font-bold lg:text-10vw text-8xl">Hi!<br />I'm Dave</h1>
-                <h2 className="text-4xl font-bold">I build & design web experiences </h2>
+                <h2 className="text-4xl font-bold">I build & design web experiences</h2>
             </div>
 
             <div className="flex flex-col-reverse md:flex-row flex-col w-full max-w-7xl md:px-16 px-8 z-20">
@@ -29,11 +29,11 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="flex md:flex-row flex-col items-center w-full max-w-7xl z-10 lg:-mt-16 md:ml-2 mt-8 px-2 md:px-0">
+            <div className="flex md:flex-row flex-col items-center w-full max-w-7xl z-10 lg:-mt-16 mt-8 px-4 xl:px-0">
                 <div className="md:w-2/3 w-full md:mr-16 bg-pink-500 dark:bg-pink-800 rounded-2xl p-8 md:p-14 transition-colors duration-500 ease-in-out">
                     <h2 className="text-4xl font-bold mb-2">My services</h2>
                     <p className="mb-8">In the past 10 years I've helped big and small companies with their customer facing web experiences.</p>
-                    <ul className="list-disc horizontal-list flex flex-wrap">
+                    <ul className="list-disc flex flex-wrap">
                         <li className="md:w-1/2 w-full mb-4 pr-8">
                             <h4 className="text-2xl font-bold">Websites</h4>
                             <p>Tell your story or sell your products to your users and customers in a digital environment.</p>
@@ -66,7 +66,7 @@ export default function About() {
                 <div className="md:w-1/2 w-full">
                     <h2 className="text-8xl font-bold mb-4">Skills</h2>
                     <p className="mb-8 font-bold text-xl">I have developed myself in the following skills</p>
-                    <ul className="list-disc horizontal-list flex flex-wrap">
+                    <ul className="list-disc flex flex-wrap">
                         <li className="w-1/2 mb-4 pr-8">
                             Javascript
                         </li>
@@ -120,7 +120,7 @@ export default function About() {
                 <div className="md:w-1/2 w-full">
                     <h2 className="text-8xl font-bold mb-4">Hobbies</h2>
                     <p className="mb-8 font-bold text-xl">You can't live a healthy life without some fun hobbies</p>
-                    <ul className="list-disc horizontal-list flex flex-wrap">
+                    <ul className="list-disc flex flex-wrap">
                         <li className="w-1/2 mb-4 pr-8">
                             BBQ
                         </li>
@@ -143,7 +143,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="w-full bg-riptide-500 dark:bg-riptide-900 flex justify-center mt-32 mb-16 py-16">
+            <div className="bg-riptide-500 dark:bg-riptide-900 flex justify-center mt-32 mb-16 py-16 full-width-container-spacing rounded-xl">
                 <div className="px-8 md:px-16 w-full max-w-7xl">
                     <h2 className="text-8xl font-bold mb-2">Process</h2>
                     <p className="mb-16 font-bold text-2xl">With the right tools, skills and processes you can create world changing products</p>

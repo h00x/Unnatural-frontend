@@ -14,11 +14,11 @@ export default function Navigation({darkMode, setDarkMode}) {
 
     return (
         <nav
-            className="flex justify-between items-center w-full fixed top-0 p-4 bg-creme-500 dark:bg-myGray-500 z-40 transition-colors duration-500 ease-in-out">
+            className="flex justify-between items-center w-full fixed top-0 p-4 bg-creme-500 dark:bg-myGray-500 z-40 transition-colors duration-500 ease-in-out inverted-border-radius">
             <Link href="/">
-                <a><Logo/></a>
+                <a className="z-20"><Logo/></a>
             </Link>
-            <div className="flex items-center">
+            <div className="flex items-center z-20">
                 <MenuItem href="/about">About me</MenuItem>
                 <MenuItem href="/portfolio">Portfolio</MenuItem>
                 <div

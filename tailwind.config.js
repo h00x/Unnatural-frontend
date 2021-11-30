@@ -73,6 +73,7 @@ module.exports = {
       },
       fontSize: {
         '10vw': '10vw',
+        '8vw': '8vw',
       }
     }
   },

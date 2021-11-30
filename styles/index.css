@@ -7,10 +7,28 @@
         @apply bg-creme-500 dark:bg-myGray-500 transition-colors duration-500 ease-in-out;
     }
 
-    .home-content-container {
-        width: calc(100vw - theme('spacing.7'));
-        height: calc(75vh - theme('spacing.7'));
+    .document-lines::before,
+    .document-lines::after {
+        content: "";
+        height: 100vh;
+        @apply z-50 bg-creme-500 top-0 w-4 fixed;
+    }
+
+    .document-lines::before {
+        @apply left-0;
+    }
+
+    .document-lines::after {
+        @apply right-0;
+    }
+
+    .full-width-container-spacing {
+        width: calc(100vw - theme('spacing.8'));
         position: relative;
+    }
+
+    .home-content-container {
+        height: calc(75vh - theme('spacing.8'));
     }
 
     .home-content-container::after {
@@ -33,15 +51,15 @@
         width: calc(100% - 2rem);
     }
 
-    /*ul.horizontal-list {*/
-    /*    position: relative;*/
-    /*}*/
+    .inverted-border-radius::before {
+        content: "";
+        position: absolute;
 
-    /*ul.horizontal-list li::before {*/
-    /*    content: " \00b7";*/
-    /*    position: absolute;*/
-    /*    margin-left: -1rem;*/
-    /*    font-size: 2.5rem;*/
-    /*    line-height: 2rem;*/
-    /*}*/
+        bottom: -3rem;
+        height: 3rem;
+        width: calc(100vw - theme('spacing.8'));
+        @apply rounded-t-xl;
+        box-shadow: 0 -25px 0 0 #fff4eb;
+        z-index: 0;
+    }
 }

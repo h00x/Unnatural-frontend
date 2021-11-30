@@ -25,7 +25,7 @@ export default function Layout({ children }) {
     }, [darkMode]);
 
     return (
-        <div className="text-myGray-500 dark:text-creme-500 mt-16">
+        <div className="text-myGray-500 dark:text-creme-500 mt-16 document-lines">
             <SiteHead />
             <Navigation setDarkMode={setDarkMode} darkMode={darkMode} />
 

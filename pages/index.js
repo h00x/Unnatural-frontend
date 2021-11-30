@@ -21,18 +21,23 @@ export async function getStaticProps() {
 export default function Home({ home }) {
   return (
     <Layout>
-        <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-myGray-500">
+        <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
             <div className="z-20">
                 <p className="flex items-center justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
                     { home.subtitle } <span className="text-base ml-4"><ButtonSimple href="/contact">Available for Remote Freelance Work</ButtonSimple></span>
                 </p>
 
-                <h1 className="md:text-9xl text-6xl font-bold text-creme-500 mb-8">
+                <h1 className="md:text-8vw text-6xl font-bold text-creme-500 mb-8">
                     { home.title }
                 </h1>
 
                 <div className="w-full flex justify-end">
-                    <p className="mb-12 md:w-1/3 w-full md:text-left transition-colors duration-500 ease-in-out">I help companies to design digital products and turn ideas into a functional and delightful experience. I’m focusing on working on interface and digital design – mainly building products, branding and websites.</p>
+                    <p className="mb-12 md:w-1/3 w-full md:text-left transition-colors duration-500 ease-in-out">
+                        I help companies create, redesign, optimize and improve their websites or SaaS
+                        applications. My specialty lies in being able to do a project from start to finish by doing the
+                        UX/UI design, Frontend development and Backend development. My passion is to create web experiences
+                        of Unnatural beauty.
+                    </p>
                 </div>
                 <Button href="mailto:dave@unnatural.nl" icon={<FontAwesomeIcon icon={faPaperPlane} />}>dave@unnatural.nl</Button>
             </div>
@@ -44,7 +49,10 @@ export default function Home({ home }) {
             </div>
             <div className="md:w-1/2 w-full">
                 <h2 className="md:text-8xl text-6xl font-bold mb-8">About<br />me</h2>
-                <p className="mb-8 md:max-w-xl">Experienced Designer with a demonstrated history of working in the marketing and advertising industry. Skilled in User Experience, User Interface Design, Webdesign, Sketch, Adobe Illustrator, Concept Development, HTML, CSS, JavaScript and Graphic Design. Strong arts and design professional graduated from Mediacollege Amsterdam.</p>
+                <p className="mb-8 md:max-w-xl">
+                    I have over 10 years of experience with creating and building websites and web apps for a variety of
+                    companies.
+                </p>
                 <ButtonSimple href="/about">Learn more about me</ButtonSimple>
             </div>
         </div>
@@ -80,16 +88,16 @@ export default function Home({ home }) {
         <h2 className="md:text-8xl text-6xl font-bold text-center mb-16">Services<br />& Contact</h2>
         <div className="flex items-start justify-center flex-col md:flex-row w-full xl:w-2/3 px-8">
             <div className="max-w-3xl md:w-1/2 bg-pink-500 dark:bg-pink-800 rounded-2xl p-14">
-                <h3 className="text-3xl mb-4">I’m building digital experience and interface</h3>
-                <p className="pb-8 mb-8 border-b-2 border-pink-600 dark:border-pink-900">Focused on digital design over these years I helped companies and growing startup build apps and websites of all sorts.</p>
+                <h3 className="text-3xl mb-4">I build & design visually pleasing web experiences</h3>
+                <p className="pb-8 mb-8 border-b-2 border-pink-600 dark:border-pink-900">My passion is to help companies create, redesign, optimize and improve their websites or SaaS applications.</p>
                 <div className="text-right">
                     <ButtonSimple href="/about">Learn more about me</ButtonSimple>
                 </div>
             </div>
             <div className="max-w-3xl md:w-1/2 md:pl-14 pl-0 pt-16 md:pt-32">
                 <h5 className="mb-4">CONTACT</h5>
-                <h3 className="text-3xl mb-4">Interested?<br />Lets Get In Touch!</h3>
-                <p className="mb-8">I’m not really active on Linkedin but you can stay in touch with me on Twitter. I post some of my work on Dribbble and some experiments on Codepen and Instagram.</p>
+                <h3 className="text-3xl mb-4">Interested?<br />Lets work together!</h3>
+                <p className="mb-8">I'm open to remote freelance positions. Feel free to reach out to me. I'd love to help you.</p>
                 <Button href="mailto:dave@unnatural.nl" icon={<FontAwesomeIcon icon={faEnvelope} />}>dave@unnatural.nl</Button>
             </div>
         </div>
