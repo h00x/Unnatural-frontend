@@ -3,7 +3,7 @@ import Footer from "../components/footer"
 import Button from '../components/button'
 import ButtonSimple from '../components/button-simple'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import profilePicture from '../public/images/dave.jpg'
 
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 export default function Home({ home }) {
   return (
     <Layout>
-        <div className="flex flex-col items-center justify-center m-4 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-myGray-500">
+        <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container p-8 bg-riptide-500 dark:bg-myGray-500">
             <div className="z-20">
                 <p className="flex items-center justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
                     { home.subtitle } <span className="text-base ml-4"><ButtonSimple href="/contact">Available for Remote Freelance Work</ButtonSimple></span>
@@ -74,6 +74,23 @@ export default function Home({ home }) {
                     <p className="mb-8">E-Zorg (part of KPN) needed an update in their corporate identity. I made a redesign for their website, developed it with Wordpress as a backend as requested by E-Zorg. I've also redesigned the business carts, official writing papers, stickers, presentation slides, email templates and made the brand identity book.</p>
                     <ButtonSimple href="#">Go to project</ButtonSimple>
                 </div>
+            </div>
+        </div>
+
+        <h2 className="md:text-8xl text-6xl font-bold text-center mb-16">Services<br />& Contact</h2>
+        <div className="flex items-start justify-center flex-col md:flex-row w-full xl:w-2/3 px-8">
+            <div className="max-w-3xl md:w-1/2 bg-pink-500 dark:bg-pink-800 rounded-2xl p-14">
+                <h3 className="text-3xl mb-4">I’m building digital experience and interface</h3>
+                <p className="pb-8 mb-8 border-b-2 border-pink-600 dark:border-pink-900">Focused on digital design over these years I helped companies and growing startup build apps and websites of all sorts.</p>
+                <div className="text-right">
+                    <ButtonSimple href="/about">Learn more about me</ButtonSimple>
+                </div>
+            </div>
+            <div className="max-w-3xl md:w-1/2 md:pl-14 pl-0 pt-16 md:pt-32">
+                <h5 className="mb-4">CONTACT</h5>
+                <h3 className="text-3xl mb-4">Interested?<br />Lets Get In Touch!</h3>
+                <p className="mb-8">I’m not really active on Linkedin but you can stay in touch with me on Twitter. I post some of my work on Dribbble and some experiments on Codepen and Instagram.</p>
+                <Button href="mailto:dave@unnatural.nl" icon={<FontAwesomeIcon icon={faEnvelope} />}>dave@unnatural.nl</Button>
             </div>
         </div>
     </Layout>

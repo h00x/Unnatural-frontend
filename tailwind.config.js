@@ -70,6 +70,9 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+      },
+      fontSize: {
+        '10vw': '10vw',
       }
     }
   },
