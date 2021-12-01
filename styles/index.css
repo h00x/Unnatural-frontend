@@ -66,4 +66,8 @@
     .footer-width {
         width: calc(100% - 2rem);
     }
+
+    .enable-overflow span {
+        overflow: visible !important;
+    }
 }
