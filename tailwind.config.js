@@ -79,7 +79,7 @@ module.exports = {
         'reverse-xl': '0 0 25px 0 rgba(0, 0, 0, 0.25)',
         'reverse-2xl': '0 0 50px 0 rgba(0, 0, 0, 0.25)',
       }
-    }
+    },
   },
   variants: {
     extend: {},

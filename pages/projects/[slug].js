@@ -21,7 +21,7 @@ export default function Project({ project, url }) {
             </div>
 
             <div className="md:w-2/3 w-full max-w-7xl md:px-16 px-8 mb-8 mt-8 break-words">
-                <p className="font-bold mb-4"><Link href="/projects"><a className="mr-16"><FontAwesomeIcon icon={faArrowLeftLong} /> Back to overview</a></Link> { project.company }</p>
+                <p className="font-bold mb-4 flex justify-between"><Link href="/projects"><a className="mr-8"><FontAwesomeIcon icon={faArrowLeftLong} /> Back to overview</a></Link> { project.company }</p>
                 <h1 className="font-bold md:text-7xl text-4xl">{ project.title }</h1>
                 <p className="mb-8">{ project.intro_text }</p>
                 <ButtonSimple href={ project.link } icon={ faExternalLink } target='_blank'>Go to website</ButtonSimple>
