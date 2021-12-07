@@ -6,10 +6,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 export default function Navigation({darkMode, setDarkMode}) {
     function Logo() {
         if (darkMode) {
-            return <img src="images/unnatural-logo-dark.svg" alt="Unnatural Logo" className="h-8"/>;
+            return <img src="../images/unnatural-logo-dark.svg" alt="Unnatural Logo" className="h-8"/>;
         }
 
-        return <img src="images/unnatural-logo-light.svg" alt="Unnatural Logo" className="h-8"/>;
+        return <img src="../images/unnatural-logo-light.svg" alt="Unnatural Logo" className="h-8"/>;
     }
 
     return (
@@ -20,7 +20,7 @@ export default function Navigation({darkMode, setDarkMode}) {
             </Link>
             <div className="flex items-center z-20">
                 <MenuItem href="/about">About me</MenuItem>
-                <MenuItem href="/portfolio">Portfolio</MenuItem>
+                <MenuItem href="/projects">Projects</MenuItem>
                 <div
                     className="relative w-12 h-6 rounded-2xl bg-myGray-500 dark:bg-creme-500 cursor-pointer inline-block ml-8 transition-all duration-500 ease-in-out">
                     <input

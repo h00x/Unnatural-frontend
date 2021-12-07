@@ -95,7 +95,7 @@ export default function About({ data, url }) {
             <div className="flex items-start justify-center flex-col md:flex-row w-full xl:w-2/3 px-8">
                 <div className="max-w-3xl md:w-1/2 md:pl-14 pl-0">
                     <h5 className="text-xl mb-4">{ data.contact_subtitle }</h5>
-                    <h3 className="text-6xl font-bold mb-4">{ data.contact_title }</h3>
+                    <h3 className="text-6xl font-bold mb-4 w-96">{ data.contact_title }</h3>
                     <p className="mb-8">{ data.contact_text }</p>
                     <Button href={ data.contact_button_url } icon={<FontAwesomeIcon icon={fa.faEnvelope} />}>{ data.contact_button_text }</Button>
                 </div>
