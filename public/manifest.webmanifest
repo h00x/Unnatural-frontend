@@ -1,0 +1,36 @@
+{
+    "theme_color": "#95eedd",
+    "background_color": "#fff4eb",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Unnatural - Portfolio of Dave Hoeks",
+    "short_name": "Unnatural",
+    "description": "Showcase website of Dave Hoeks, owner of Unnatural Concepts. Dave Hoeks is a freelance Web developer and Web designer living in the Netherlands.",
+    "icons": [
+        {
+            "src": "/images/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

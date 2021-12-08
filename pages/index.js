@@ -94,7 +94,7 @@ export default function Home({ dataHome, dataProjects, url }) {
                     </div>
                 </div>
                 <div className="max-w-3xl md:w-1/2 md:pl-14 pl-0 pt-16 md:pt-32">
-                    <h5 className="mb-4">{ dataHome.contact_subtitle }</h5>
+                    <h4 className="mb-4">{ dataHome.contact_subtitle }</h4>
                     <h3 className="text-3xl mb-4 w-64">{ dataHome.contact_title }</h3>
                     <p className="mb-8">{ dataHome.contacttext }</p>
                     <Button href={ dataHome.contact_button_url } icon={<FontAwesomeIcon icon={faEnvelope} />}>{ dataHome.contact_button_text }</Button>

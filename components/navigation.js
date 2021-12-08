@@ -10,10 +10,10 @@ export default function Navigation({darkMode, setDarkMode}) {
 
     function Logo() {
         if (darkMode) {
-            return <img src="../images/unnatural-logo-dark.svg" alt="Unnatural Logo" className="h-8"/>;
+            return <img src="../images/unnatural-logo-dark.svg" height="32" width="149" alt="Unnatural Logo" className="h-8"/>;
         }
 
-        return <img src="../images/unnatural-logo-light.svg" alt="Unnatural Logo" className="h-8"/>;
+        return <img src="../images/unnatural-logo-light.svg" height="32" width="149" alt="Unnatural Logo" className="h-8"/>;
     }
 
     return (
@@ -30,10 +30,11 @@ export default function Navigation({darkMode, setDarkMode}) {
                 <div className="relative w-12 h-6 rounded-2xl bg-myGray-500 dark:bg-creme-500 cursor-pointer inline-block ml-8 transition-all duration-500 ease-in-out sm:my-0 my-4">
                     <input
                         type="checkbox"
-                        name="darkMode"
+                        name="darkModeToggle"
                         checked={darkMode}
                         onChange={() => setDarkMode(!darkMode)}
                         className="absolute w-full h-full opacity-0 cursor-pointer z-50"
+                        aria-label="Dark mode toggle"
                     />
                     <span className="absolute top-0.5 left-6 dark:left-1 dark:bg-myGray-500 bg-creme-500 w-5 h-5 rounded-2xl transition-all duration-200 ease-in-out z-20" />
                     <FontAwesomeIcon icon={faSun} className="text-creme-500 dark:text-myGray-500 text-xs absolute left-7 top-1.5 transition-all duration-200 ease-in-out" />

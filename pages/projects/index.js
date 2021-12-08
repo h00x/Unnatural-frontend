@@ -9,7 +9,7 @@ export default function Projects ({ projects, url }) {
     return (
         <Layout>
             <div className="w-full max-w-7xl md:px-16 px-8 mb-16 mt-32">
-                <h1 className="font-bold text-10vw">My projects</h1>
+                <h1 className="font-bold text-5xl sm:text-10vw xl:text-9xl sm:mb-8">My projects</h1>
                 <h2 className="md:text-4xl text-2xl font-bold">Some of my best work</h2>
             </div>
 
