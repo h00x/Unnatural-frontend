@@ -6,22 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import profilePicture from '../public/images/dave.jpg'
-
-export async function getStaticProps() {
-    const resHome = await fetch(process.env.API_URL + '/home?populate=*')
-    const home = await resHome.json()
-
-    const resProjects = await fetch(process.env.API_URL + '/projects?pagination[pageSize]=2&sort=createdAt:desc&populate[thumbnail]=*')
-    const projects = await resProjects.json()
-
-    return {
-        props: {
-            dataHome: home.data.attributes,
-            dataProjects: projects.data,
-            url: process.env.URL,
-        },
-    }
-}
+import {getHomeData, getHomeProjects} from "../lib/api";
 
 export default function Home({ dataHome, dataProjects, url }) {
     return (
@@ -102,4 +87,18 @@ export default function Home({ dataHome, dataProjects, url }) {
             </div>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const dataHome = await getHomeData()
+
+    const dataProjects = await getHomeProjects()
+
+    return {
+        props: {
+            dataHome,
+            dataProjects,
+            url: process.env.URL,
+        },
+    }
 }

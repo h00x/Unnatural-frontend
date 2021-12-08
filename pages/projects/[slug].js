@@ -4,13 +4,14 @@ import Head from 'next/head'
 import ButtonSimple from "../../components/button-simple";
 import { faArrowLeftLong, faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
+import Custom404 from "../404";
+import {getAllProjectsUnpopulated, getProject} from "../../lib/api";
 
 export default function Project({ project, url }) {
     const router = useRouter()
 
     if (!router.isFallback && !project?.slug) {
-        return <ErrorPage statusCode={404} />
+        return <Custom404 />
     }
 
     return (
@@ -60,18 +61,12 @@ export default function Project({ project, url }) {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(process.env.API_URL + '/projects?filters[slug][$eq]=' + params.slug + '&populate[project_content][populate]=*&populate[intro_image][populate]=*')
-    const content = await res.json()
-
-    if (content.errors) {
-        console.error(content.errors)
-        throw new Error('Failed to fetch API')
-    }
+    const data = await getProject(params.slug)
 
     return {
         props: {
             project: {
-                ...content?.data[0]?.attributes,
+                ...data,
             },
             url: process.env.URL,
         },
@@ -79,11 +74,10 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch(process.env.API_URL + '/projects')
-    const allProjects = await res.json()
+    const allProjects = await getAllProjectsUnpopulated()
 
     return {
-        paths: allProjects?.data.map((project) => `/projects/${project.attributes.slug}`) || [],
+        paths: allProjects?.map((project) => `/projects/${project.attributes.slug}`) || [],
         fallback: true,
     }
 }

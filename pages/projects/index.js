@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import Image from "next/image";
 import ButtonSimple from "../../components/button-simple";
+import {getAllProjectsWithThumbnail} from "../../lib/api";
 
 export default function Projects ({ projects, url }) {
 
@@ -35,12 +36,11 @@ export default function Projects ({ projects, url }) {
 }
 
 export async function getStaticProps() {
-    const resProjects = await fetch(process.env.API_URL + '/projects?populate=thumbnail')
-    const projects = await resProjects.json()
+    const projects = await getAllProjectsWithThumbnail();
 
     return {
         props: {
-            projects: projects.data,
+            projects,
             url: process.env.URL,
         },
     }

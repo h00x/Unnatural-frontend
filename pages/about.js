@@ -5,18 +5,7 @@ import ButtonSimple from "../components/button-simple";
 import Button from "../components/button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as fa from "@fortawesome/free-solid-svg-icons";
-
-export async function getStaticProps() {
-    const res = await fetch(process.env.API_URL + '/about?populate=*')
-    const about = await res.json()
-
-    return {
-        props: {
-            data: about.data.attributes,
-            url: process.env.URL
-        },
-    }
-}
+import {getAboutData} from "../lib/api";
 
 export default function About({ data, url }) {
     return (
@@ -102,4 +91,16 @@ export default function About({ data, url }) {
             </div>
         </Layout>
     )
+}
+
+
+export async function getStaticProps() {
+    const data = await getAboutData()
+
+    return {
+        props: {
+            data,
+            url: process.env.URL
+        },
+    }
 }
