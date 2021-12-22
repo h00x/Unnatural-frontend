@@ -1,7 +1,7 @@
-import SiteHead from "./site-head";
 import Navigation from "./navigation";
 import Footer from "./footer";
 import {useEffect, useState} from "react";
+import SiteHead from "./site-head";
 
 export default function Layout({ children }) {
     const [darkMode, setDarkMode] = useState(false);

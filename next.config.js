@@ -7,8 +7,4 @@ module.exports = withPWA({
     images: {
         domains: ['unnatural.nl', 'localhost'],
     },
-    i18n: {
-        locales: ["en"],
-        defaultLocale: "en",
-    },
 })

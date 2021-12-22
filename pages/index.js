@@ -1,14 +1,13 @@
 import Layout from '../components/layout'
-import Footer from "../components/footer"
 import Button from '../components/button'
 import ButtonSimple from '../components/button-simple'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
-import profilePicture from '../public/images/dave.jpg'
-import {getHomeData, getHomeProjects} from "../lib/api";
+import {getHomeData, getHomeProjects, getInTouchData} from "../lib/api";
+import GetInTouch from "../components/get-in-touch";
 
-export default function Home({ dataHome, dataProjects, url }) {
+export default function Home({ dataHome, dataProjects, inTouchData, url }) {
     return (
         <Layout>
             <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
@@ -69,35 +68,21 @@ export default function Home({ dataHome, dataProjects, url }) {
                 </div>
             </div>
 
-            <h2 className="md:text-8xl text-6xl font-bold text-center mb-16 md:w-128 w-full px-8">{ dataHome.service_contact_title }</h2>
-            <div className="flex items-start justify-center flex-col md:flex-row w-full xl:w-2/3 px-8">
-                <div className="max-w-3xl md:w-1/2 bg-pink-500 dark:bg-pink-800 rounded-2xl p-14">
-                    <h3 className="text-3xl mb-4">{ dataHome.service_title }</h3>
-                    <p className="pb-8 mb-8 border-b-2 border-pink-600 dark:border-pink-900">{ dataHome.service_text }</p>
-                    <div className="text-right">
-                        <ButtonSimple href="/about">{ dataHome.service_link_text }</ButtonSimple>
-                    </div>
-                </div>
-                <div className="max-w-3xl md:w-1/2 md:pl-14 pl-0 pt-16 md:pt-32">
-                    <h4 className="mb-4">{ dataHome.contact_subtitle }</h4>
-                    <h3 className="text-3xl mb-4 w-64">{ dataHome.contact_title }</h3>
-                    <p className="mb-8">{ dataHome.contacttext }</p>
-                    <Button href={ dataHome.contact_button_url } icon={<FontAwesomeIcon icon={faEnvelope} />}>{ dataHome.contact_button_text }</Button>
-                </div>
-            </div>
+            <GetInTouch data={inTouchData} />
         </Layout>
     )
 }
 
 export async function getStaticProps() {
-    const dataHome = await getHomeData()
-
-    const dataProjects = await getHomeProjects()
+    const dataHome = (await getHomeData()) || []
+    const dataProjects = (await getHomeProjects()) || []
+    const inTouchData = (await getInTouchData()) || []
 
     return {
         props: {
             dataHome,
             dataProjects,
+            inTouchData,
             url: process.env.URL,
         },
     }

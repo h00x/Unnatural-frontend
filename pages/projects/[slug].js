@@ -5,9 +5,10 @@ import ButtonSimple from "../../components/button-simple";
 import { faArrowLeftLong, faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from 'next/router'
 import Custom404 from "../404";
-import {getAllProjectsUnpopulated, getProject} from "../../lib/api";
+import {getAllProjectsUnpopulated, getInTouchData, getProject} from "../../lib/api";
+import GetInTouch from "../../components/get-in-touch";
 
-export default function Project({ project, url }) {
+export default function Project({ project, inTouchData, url }) {
     const router = useRouter()
 
     if (!router.isFallback && !project?.slug) {
@@ -54,6 +55,8 @@ export default function Project({ project, url }) {
                             )
                         }
                     })}
+
+                    <GetInTouch data={inTouchData} />
                 </>
             )}
         </Layout>
@@ -62,12 +65,14 @@ export default function Project({ project, url }) {
 
 export async function getStaticProps({ params }) {
     const data = await getProject(params.slug)
+    const inTouchData = (await getInTouchData()) || []
 
     return {
         props: {
             project: {
                 ...data,
             },
+            inTouchData,
             url: process.env.URL,
         },
     }
