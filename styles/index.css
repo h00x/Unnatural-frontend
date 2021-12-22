@@ -43,9 +43,9 @@
         position: relative;
     }
 
-    .home-content-container {
-        height: calc(75vh - theme('spacing.8'));
-    }
+    /*.home-content-container {*/
+    /*    height: calc(75vh - theme('spacing.8'));*/
+    /*}*/
 
     .home-content-container::after {
         content: '';

@@ -11,9 +11,9 @@ import {blurredImage} from "../lib/helpers";
 export default function Home({ dataHome, dataProjects, inTouchData }) {
     return (
         <Layout>
-            <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
+            <div className="flex flex-col items-center justify-center m-4 mt-0 pb-24 pt-24 home-content-container text-center rounded-xl h-auto full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
                 <div className="z-20">
-                    <p className="flex items-center justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
+                    <p className="flex items-center flex-col md:flex-row justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
                         { dataHome.sub_title } <span className="text-base ml-4"><ButtonSimple href={ dataHome.contact_button_url }>{ dataHome.header_link_text }</ButtonSimple></span>
                     </p>
 
