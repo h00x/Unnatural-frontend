@@ -14,7 +14,7 @@ export default function Home({ dataHome, dataProjects, inTouchData }) {
             <div className="flex flex-col items-center justify-center m-4 mt-0 text-center rounded-xl home-content-container full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
                 <div className="z-20">
                     <p className="flex items-center justify-center text-4xl mb-2 transition-colors duration-500 ease-in-out">
-                        { dataHome.sub_title } <span className="text-base ml-4"><ButtonSimple href="/contact">{ dataHome.header_link_text }</ButtonSimple></span>
+                        { dataHome.sub_title } <span className="text-base ml-4"><ButtonSimple href={ dataHome.contact_button_url }>{ dataHome.header_link_text }</ButtonSimple></span>
                     </p>
 
                     <h1 className="md:text-8vw text-6xl font-bold text-creme-500 mb-8">
