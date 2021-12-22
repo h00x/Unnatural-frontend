@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as fa from "@fortawesome/free-solid-svg-icons";
 import {getAboutData} from "../lib/api";
 
-export default function About({ data, url }) {
+export default function About({ data }) {
     return (
         <Layout>
             <div className="w-full max-w-7xl md:px-16 px-8 mb-16 mt-32">
@@ -21,7 +21,7 @@ export default function About({ data, url }) {
                     <p>{ data.about_me_text }</p>
                 </div>
                 <div className="md:w-1/2 w-full mb-8 md:mb-0 text-center">
-                    <Image src={ url + data.photo.data.attributes.formats.small.url } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
+                    <Image src={ data.photo.data.attributes.formats.small.url } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
                 </div>
             </div>
 
@@ -100,7 +100,6 @@ export async function getStaticProps() {
     return {
         props: {
             data,
-            url: process.env.URL
         },
     }
 }

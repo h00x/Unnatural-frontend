@@ -5,6 +5,6 @@ module.exports = withPWA({
         dest: 'public'
     },
     images: {
-        domains: ['unnatural.nl', 'localhost'],
+        domains: ['unnatural.nl', 'localhost', 'res.cloudinary.com'],
     },
 })
