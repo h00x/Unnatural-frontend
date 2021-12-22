@@ -6,6 +6,7 @@ import Button from "../components/button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as fa from "@fortawesome/free-solid-svg-icons";
 import {getAboutData} from "../lib/api";
+import {blurredImage} from "../lib/helpers";
 
 export default function About({ data }) {
     return (
@@ -21,7 +22,15 @@ export default function About({ data }) {
                     <p>{ data.about_me_text }</p>
                 </div>
                 <div className="md:w-1/2 w-full mb-8 md:mb-0 text-center">
-                    <Image src={ data.photo.data.attributes.formats.small.hash } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
+                    <Image
+                        src={ data.photo.data.attributes.formats.small.hash }
+                        width={450}
+                        height={450}
+                        alt="Picture of Dave Hoeks"
+                        className="rounded-4xl"
+                        placeholder="blur"
+                        blurDataURL={ blurredImage(data.photo.data.attributes.formats.small.provider_metadata.public_id) }
+                    />
                 </div>
             </div>
 

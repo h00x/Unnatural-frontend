@@ -6,7 +6,9 @@ import { faArrowLeftLong, faExternalLink } from '@fortawesome/free-solid-svg-ico
 import { useRouter } from 'next/router'
 import Custom404 from "../404";
 import {getAllProjectsUnpopulated, getInTouchData, getProject} from "../../lib/api";
+import { blurredImage } from "../../lib/helpers";
 import GetInTouch from "../../components/get-in-touch";
+import { buildUrl } from 'cloudinary-build-url';
 
 export default function Project({ project, inTouchData }) {
     const router = useRouter()
@@ -24,7 +26,15 @@ export default function Project({ project, inTouchData }) {
             ) : (
                 <>
                     <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow">
-                        <Image src={ project.intro_image.data.attributes.formats.large.hash } width={1000} height={615} alt={ project.intro_image.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
+                        <Image
+                            src={ project.intro_image.data.attributes.formats.large.hash }
+                            width={1000}
+                            height={615}
+                            alt={ project.intro_image.data.attributes.alternativeText }
+                            className="rounded-t-xl shadow-reverse-2xl"
+                            placeholder="blur"
+                            blurDataURL={ blurredImage(project.intro_image.data.attributes.formats.large.provider_metadata.public_id) }
+                        />
                     </div>
 
                     <div className="md:w-2/3 w-full max-w-7xl md:px-16 px-8 mb-8 mt-8 break-words">
@@ -46,7 +56,15 @@ export default function Project({ project, inTouchData }) {
                                     {item.images.data.map((image, imageIndex) => (
                                         <div key={imageIndex}>
                                             <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow mb-4">
-                                                <Image src={ image.attributes.formats.large.hash } width={1000} height={615} alt={ image.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
+                                                <Image
+                                                    src={ image.attributes.formats.large.hash }
+                                                    width={1000}
+                                                    height={615}
+                                                    alt={ image.attributes.alternativeText }
+                                                    className="rounded-t-xl shadow-reverse-2xl"
+                                                    placeholder="blur"
+                                                    blurDataURL={ blurredImage(image.attributes.formats.large.provider_metadata.public_id) }
+                                                />
                                             </div>
                                             <p className="italic mb-16 text-center">{image.attributes.caption}</p>
                                         </div>
