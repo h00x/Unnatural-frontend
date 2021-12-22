@@ -21,7 +21,7 @@ export default function About({ data }) {
                     <p>{ data.about_me_text }</p>
                 </div>
                 <div className="md:w-1/2 w-full mb-8 md:mb-0 text-center">
-                    <Image src={ data.photo.data.attributes.formats.small.url } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
+                    <Image src={ data.photo.data.attributes.formats.small.hash } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
                 </div>
             </div>
 

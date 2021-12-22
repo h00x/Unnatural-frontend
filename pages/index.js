@@ -31,7 +31,7 @@ export default function Home({ dataHome, dataProjects, inTouchData }) {
 
             <div className="flex flex-col items-center md:flex-row w-full my-32 md:px-16 px-8">
                 <div className="md:w-1/2 w-full md:text-right text-center md:mr-16">
-                    <Image src={ dataHome.about_image.data.attributes.formats.small.url } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
+                    <Image src={ dataHome.about_image.data.attributes.formats.small.hash } width={450} height={450} alt="Picture of Dave Hoeks" className="rounded-4xl" />
                 </div>
                 <div className="md:w-1/2 w-full">
                     <h2 className="md:text-8xl text-6xl font-bold mb-8 md:w-96 w-full">{ dataHome.about_block_title }</h2>
@@ -46,7 +46,7 @@ export default function Home({ dataHome, dataProjects, inTouchData }) {
             <div className="flex flex-col justify-center md:flex-row w-full md:my-32 my-16 px-8">
                 <div className="flex flex-col items-center md:w-2/3 w-full md:mr-16 max-w-7xl">
                     <div className="lg:w-3/4 md:w-full w-full relative rounded-2xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-8 md:pt-16 pt-8 enable-overflow">
-                        <Image src={ dataProjects[0].attributes.thumbnail.data.attributes.formats.small.url } width={500} height={307} alt={ dataProjects[0].attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
+                        <Image src={ dataProjects[0].attributes.thumbnail.data.attributes.formats.small.hash } width={500} height={307} alt={ dataProjects[0].attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
                     </div>
                     <div className="lg:w-1/2 md:w-3/4 mt-12">
                         <p className="font-bold mb-4">{ dataProjects[0].attributes.company }</p>
@@ -57,7 +57,7 @@ export default function Home({ dataHome, dataProjects, inTouchData }) {
                 </div>
                 <div className="flex flex-col items-center md:w-1/3 w-full mt-32 max-w-3xl">
                     <div className="lg:w-3/4 w-full relative rounded-2xl bg-pink-600 dark:bg-pink-900 overflow-hidden flex items-end justify-center px-8 pt-8 enable-overflow">
-                        <Image src={ dataProjects[1].attributes.thumbnail.data.attributes.formats.thumbnail.url } width={245} height={151} alt={ dataProjects[0].attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
+                        <Image src={ dataProjects[1].attributes.thumbnail.data.attributes.formats.thumbnail.hash } width={245} height={151} alt={ dataProjects[0].attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
                     </div>
                     <div className="lg:w-1/2 md: 3/4 mt-12">
                         <p className="font-bold mb-4">{ dataProjects[1].attributes.company }</p>

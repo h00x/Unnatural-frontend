@@ -19,7 +19,7 @@ export default function Projects ({ projects }) {
                     <Link href={ '/projects/' + project.attributes.slug } key={index}>
                         <div className="flex xl:flex-row flex-col mb-16 items-center cursor-pointer">
                             <div className="xl:w-2/3 w-full relative rounded-2xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-8 md:pt-16 pt-8 enable-overflow xl:mr-8">
-                                <Image src={ project.attributes.thumbnail.data.attributes.formats.medium.url } width={600} height={369} alt={ project.attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
+                                <Image src={ project.attributes.thumbnail.data.attributes.formats.medium.hash } width={600} height={369} alt={ project.attributes.thumbnail.data.attributes.alternativeText } className="rounded-t-xl shadow-reverse-2xl" />
                             </div>
                             <div className="xl:w-1/3 md:w-2/3 mt-8 xl:mt-0 w-full">
                                 <p className="font-bold mb-4">{ project.attributes.company }</p>
