@@ -6,5 +6,7 @@ module.exports = withPWA({
     },
     images: {
         domains: ['unnatural.nl', 'localhost', 'res.cloudinary.com'],
+        loader: 'cloudinary',
+        path: 'https://res.cloudinary.com/unnatural/',
     },
 })
