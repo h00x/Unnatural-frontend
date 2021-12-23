@@ -9,10 +9,13 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
+                    <script type="text/javascript" src='/noflash.js' />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
+                    <script> </script>
                 </body>
             </Html>
         )
