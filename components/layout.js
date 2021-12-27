@@ -29,7 +29,7 @@ export default function Layout({ children }) {
             <SiteHead />
             <Navigation setDarkMode={setDarkMode} darkMode={darkMode} />
 
-            <main className="flex flex-col items-center justify-center w-full flex-1">
+            <main className="flex flex-col items-center justify-center w-full flex-1 break-words overflow-hidden">
                 {children}
             </main>
 

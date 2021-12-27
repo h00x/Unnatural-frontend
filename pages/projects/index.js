@@ -15,7 +15,7 @@ export default function Projects ({ projects }) {
                 <h2 className="md:text-4xl text-2xl font-bold">Some of my best work</h2>
             </div>
 
-            <div className="flex flex-col w-full max-w-7xl md:px-16 px-8 z-20">
+            <div className="flex flex-col w-full max-w-7xl md:px-16 px-4 z-20">
                 {projects.map((project, index) => (
                     <Link href={ '/projects/' + project.attributes.slug } key={index}>
                         <div className="flex xl:flex-row flex-col mb-16 items-center cursor-pointer">
@@ -30,7 +30,7 @@ export default function Projects ({ projects }) {
                                     blurDataURL={ blurredImage(project.attributes.thumbnail.data.attributes.formats.medium.provider_metadata.public_id) }
                                 />
                             </div>
-                            <div className="xl:w-1/3 md:w-2/3 mt-8 xl:mt-0 w-full">
+                            <div className="xl:w-1/3 md:w-2/3 mt-8 xl:mt-0 w-full px-4">
                                 <p className="font-bold mb-4">{ project.attributes.company }</p>
                                 <h2 className="text-3xl font-bold mb-4">{ project.attributes.title }</h2>
                                 <p className="mb-8">{ project.attributes.intro_text }</p>

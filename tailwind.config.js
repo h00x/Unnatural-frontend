@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -62,6 +63,10 @@ module.exports = {
     fontFamily: {
       sans: ['Outfit', 'sans-serif'],
       serif: ['Libre Baskerville', 'serif'],
+    },
+    screens: {
+      'xs': '400px',
+      ...defaultTheme.screens
     },
     extend: {
       spacing: {
