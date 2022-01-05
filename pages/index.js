@@ -51,7 +51,7 @@ export default function Home({ dataHome, dataProjects, inTouchData }) {
             </div>
 
             <div className="w-full px-8 max-w-7xl">
-                <h2 className="md:text-8xl text-6xl font-bold inline-block mr-8">{ dataHome.projects_title }</h2><ButtonSimple href="/portfolio" className="mt-8 md:mt-0">{ dataHome.projects_link_text }</ButtonSimple>
+                <h2 className="md:text-8xl text-6xl font-bold inline-block mr-8">{ dataHome.projects_title }</h2><ButtonSimple href="/projects" className="mt-8 md:mt-0">{ dataHome.projects_link_text }</ButtonSimple>
             </div>
             <div className="flex flex-col justify-center md:flex-row w-full md:my-32 my-16">
                 <Link href={'/projects/' + dataProjects[0].attributes.slug}>
