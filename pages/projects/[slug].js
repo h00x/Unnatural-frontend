@@ -41,7 +41,7 @@ export default function Project({ project, inTouchData }) {
                         <p className="font-bold mb-4 flex justify-between"><ButtonSimple href="/projects" className="mr-8" icon={faArrowLeftLong}> Back to overview</ButtonSimple> { project.company }</p>
                         <h1 className="font-bold md:text-7xl text-4xl">{ project.title }</h1>
                         <p className="mb-8">{ project.intro_text }</p>
-                        <ButtonSimple href={ project.link } icon={ faExternalLink } target='_blank'>Go to website</ButtonSimple>
+                        { project.link ? <ButtonSimple href={ project.link } icon={ faExternalLink } target='_blank'>Go to website</ButtonSimple> : ''}
                     </div>
 
                     {project.project_content.map((item, index) => {
