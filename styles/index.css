@@ -70,4 +70,17 @@
     .enable-overflow span {
         overflow: visible !important;
     }
+
+    .image-container {
+        width: 1000px;
+        height: 615px;
+        position: relative;
+    }
+
+    .auto-height-image {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+        object-fit: cover;
+    }
 }

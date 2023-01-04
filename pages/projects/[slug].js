@@ -56,15 +56,16 @@ export default function Project({ project, inTouchData }) {
                                     {item.images.data.map((image, imageIndex) => (
                                         <div key={imageIndex}>
                                             <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow mb-4">
-                                                <Image
-                                                    src={ image.attributes.formats.large.hash }
-                                                    width={1000}
-                                                    height={615}
-                                                    alt={ image.attributes.alternativeText }
-                                                    className="rounded-t-xl shadow-reverse-2xl"
-                                                    placeholder="blur"
-                                                    blurDataURL={ blurredImage(image.attributes.formats.large.provider_metadata.public_id) }
-                                                />
+                                                <div className="image-container">
+                                                    <Image
+                                                        src={ image.attributes.formats.large.hash }
+                                                        layout="fill"
+                                                        alt={ image.attributes.alternativeText }
+                                                        className="rounded-t-xl shadow-reverse-2xl auto-height-image"
+                                                        placeholder="blur"
+                                                        blurDataURL={ blurredImage(image.attributes.formats.large.provider_metadata.public_id) }
+                                                    />
+                                                </div>
                                             </div>
                                             <p className="italic mb-16 text-center">{image.attributes.caption}</p>
                                         </div>
