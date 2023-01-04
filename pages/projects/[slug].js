@@ -55,7 +55,7 @@ export default function Project({ project, inTouchData }) {
 
                                     {item.images.data.map((image, imageIndex) => (
                                         <div key={imageIndex}>
-                                            <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow mb-4">
+                                            <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow mb-4 mx-auto">
                                                 <div className="image-container">
                                                     <Image
                                                         src={ image.attributes.formats.large.hash }

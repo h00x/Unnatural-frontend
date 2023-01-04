@@ -20,7 +20,7 @@
 
         bottom: -3rem;
         height: 3rem;
-        width: calc(100vw - theme('spacing.8'));
+        width: calc(100vw - theme('spacing.12') + 1px);
         @apply rounded-t-xl transition-shadow duration-500 ease-in-out;
         box-shadow: 0 -1rem 0 0 #fff4eb;
         z-index: 0;
@@ -39,7 +39,7 @@
     }
 
     .full-width-container-spacing {
-        width: calc(100vw - theme('spacing.8'));
+        width: calc(100vw - theme('spacing.12'));
         position: relative;
     }
 
@@ -72,8 +72,9 @@
     }
 
     .image-container {
+        max-width: 1000px;
         width: 1000px;
-        height: 615px;
+        aspect-ratio: 1 / 0.615;
         position: relative;
     }
 
