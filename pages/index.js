@@ -10,7 +10,6 @@ import GetInTouch from "../components/get-in-touch";
 import {blurredImage} from "../lib/helpers";
 
 export default function Home({ dataHome, dataProjects, inTouchData }) {
-    console.log(dataProjects);
     return (
         <Layout>
             <div className="flex flex-col items-center justify-center m-4 mt-0 pb-24 pt-24 home-content-container text-center rounded-xl h-auto full-width-container-spacing p-8 bg-riptide-500 dark:bg-myGray-500">
