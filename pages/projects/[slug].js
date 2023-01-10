@@ -58,12 +58,12 @@ export default function Project({ project, inTouchData }) {
                                             <div className="full-width-container-spacing relative rounded-xl bg-riptide-500 dark:bg-riptide-900 overflow-hidden flex items-end justify-center md:px-16 px-4 md:pt-16 pt-4 enable-overflow mb-4 mx-auto">
                                                 <div className="image-container">
                                                     <Image
-                                                        src={ image.attributes.formats.large.hash }
+                                                        src={ image.attributes.formats.large ? image.attributes.formats.large.hash : image.attributes.formats.medium.hash }
                                                         layout="fill"
                                                         alt={ image.attributes.alternativeText }
                                                         className="rounded-t-xl shadow-reverse-2xl auto-height-image"
                                                         placeholder="blur"
-                                                        blurDataURL={ blurredImage(image.attributes.formats.large.provider_metadata.public_id) }
+                                                        blurDataURL={ blurredImage( image.attributes.formats.large ? image.attributes.formats.large.provider_metadata.public_id : image.attributes.formats.medium.provider_metadata.public_id) }
                                                     />
                                                 </div>
                                             </div>
